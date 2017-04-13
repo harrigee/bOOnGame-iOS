@@ -74,7 +74,7 @@
 - (void)createAreas
 {
     NSMutableArray *colors = [self getRandomizedColors];
-        
+    
     // create new areas
     for (int i = 0; i < [Properties sharedProperties].worldAreaCount; i++)
     {
@@ -125,7 +125,7 @@
             createNewOnes = true;
         }
         if(area.frame.origin.x + area.frame.size.width < 0)
-        {            
+        {
             [area removeFromSuperview];
             [areas removeObjectAtIndex:i];
         }
@@ -162,13 +162,13 @@
             view.transform = CGAffineTransformMakeScale(1.5f, 1.5f);
             view.alpha = 0;
         }
-        completion:^(BOOL finished){
-            [view removeFromSuperview];
-            [areas removeObject:view];
-            if(areas.count <= 0) {
-                [self createAreas];
-            }
-        }];
+                         completion:^(BOOL finished){
+                             [view removeFromSuperview];
+                             [areas removeObject:view];
+                             if(areas.count <= 0) {
+                                 [self createAreas];
+                             }
+                         }];
     }
 }
 
@@ -196,7 +196,7 @@
                      [UIColor colorWithRed:90/255.0f green:140/255.0f blue:173/255.0f alpha:1],
                      [UIColor colorWithRed:250/255.0f green:215/255.0f blue:130/255.0f alpha:1],
                      [UIColor colorWithRed:173/255.0f green:137/255.0f blue:90/255.0f alpha:1]];
-
+    
     inputColors3 = @[[UIColor colorWithRed:158/255.0f green:204/255.0f blue:186/255.0f alpha:1],
                      [UIColor colorWithRed:12/255.0f green:114/255.0f blue:130/255.0f alpha:1],
                      [UIColor colorWithRed:207/255.0f green:106/255.0f blue:19/255.0f alpha:1],
@@ -223,7 +223,7 @@
                      [UIColor colorWithRed:0/255.0f green:137/255.0f blue:255/255.0f alpha:1],
                      [UIColor colorWithRed:255/255.0f green:0/255.0f blue:93/255.0f alpha:1]];
     
-                     
+    
     [setOfColors addObject:inputColors1];
     [setOfColors addObject:inputColors2];
     [setOfColors addObject:inputColors3];
@@ -231,7 +231,7 @@
     [setOfColors addObject:inputColors5];
     [setOfColors addObject:inputColors6];
     [setOfColors addObject:inputColors7];
-
+    
     return setOfColors;
 }
 
@@ -244,7 +244,7 @@
     for (int i = 0; i < [Properties sharedProperties].worldAreaCount; i++) {
         [freeColorIndizes addObject:[NSNumber numberWithInt:i]];
     }
-        
+    
     for (int i = 0; i < [Properties sharedProperties].worldAreaCount; i++) {
         random = arc4random() % freeColorIndizes.count;
         NSInteger nextColorIndex = [[freeColorIndizes objectAtIndex:random] integerValue];

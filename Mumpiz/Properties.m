@@ -42,7 +42,7 @@
     else
         globalGameMode = false;
     
-    globalBannerHeight = 0;
+    globalBannerHeight = 50;
     
     // How many boons
     if(globalGameMode)
@@ -62,9 +62,9 @@
     }
     
     // GLOBAL
-    globalGameHeight = [UIScreen mainScreen].bounds.size.height - globalBannerHeight;
+    globalGameHeight = [self screenSize].height - globalBannerHeight;
     globalScreenHeight = 568;
-    globalGameWidth =  [UIScreen mainScreen].bounds.size.width;
+    globalGameWidth =  [self screenSize].width;
     globalScreenWidth = 320;
     globalHeightRatio = (float)globalGameHeight / (float)globalScreenHeight;
     globalWidthRatio = (float)globalGameWidth / (float)globalScreenWidth;

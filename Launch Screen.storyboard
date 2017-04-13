@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_152.png" translatesAutoresizingMaskIntoConstraints="NO" id="yeD-uR-6yV">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_80.png" translatesAutoresizingMaskIntoConstraints="NO" id="yeD-uR-6yV">
                                 <rect key="frame" x="16" y="20" width="343" height="647"/>
                             </imageView>
                         </subviews>
@@ -41,6 +41,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_152.png" width="152" height="152"/>
+        <image name="icon_80.png" width="80" height="80"/>
     </resources>
 </document>
