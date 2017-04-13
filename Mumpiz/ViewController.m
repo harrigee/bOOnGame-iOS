@@ -70,15 +70,11 @@
     // create game logic
     gameLogic = [[GameLogic alloc] initWithPlayer:player andWorld:world andGravity:gravity andUI:ui andBannerView:adBannerView andSuperViewController:self];
     gameLogic.delegate = self;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
     
     // starts the loop
     [self startUpdate];
 }
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -307,6 +303,7 @@
 - (void)startMenuAnimation
 {
     [self.view bringSubviewToFront:adBannerView];
+    [ui stopAnimateMenu];
     [ui startAnimateMenu];
 }
 
