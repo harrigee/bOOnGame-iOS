@@ -342,10 +342,9 @@
 
 - (void)showMenuScreen
 {
+    [self stopAnimateMenu];
     [self showMenuScreenWithText:[NSString stringWithFormat:@"[ welcome ]"]];
     [retryButton setTitle:[NSString stringWithFormat:@"start"] forState: UIControlStateNormal];
-    [self startAnimateMenu];
-    //[self.delegate stopGame]; // maybe working
 }
 
 - (void)showGameOverScreen

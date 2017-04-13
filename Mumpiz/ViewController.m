@@ -78,6 +78,10 @@
     
     // starts the loop
     [self startUpdate];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     // start in menu
     [ui showMenuScreen];
