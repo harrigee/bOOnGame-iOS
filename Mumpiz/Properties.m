@@ -42,7 +42,7 @@
     else
         globalGameMode = false;
     
-    globalBannerHeight = 50;
+    globalBannerHeight = 0;
     
     // How many boons
     if(globalGameMode)
