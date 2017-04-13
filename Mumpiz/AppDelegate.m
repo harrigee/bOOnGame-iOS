@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!"
-                                                    message:@"bOOn has been developed by a single developer and his creative and awesome girlfriend. There is no commercial background, so we are asking you to please tell your friends about bOOn and rate us on the App Store :)"
+                                                    message:@"bOOn has no commercial background, so we are asking you to please tell your friends about bOOn and rate us on the AppStore :)"
                                                    delegate:self
                                           cancelButtonTitle:nil
                                           otherButtonTitles:@"I want to rate!", @"I promise to tell my friends", @"I just want to play... ಠ_ಠ" , nil];
