@@ -148,7 +148,7 @@
     uiScreenLayerHeight = 320;
     uiItemCenterWidth = 60;
     uiScoreLabelHeight = 40;
-    uiScreenLayerY = (globalGameHeight / 2 - uiScreenLayerHeight / 2) - 40;
+    uiScreenLayerY = (globalGameHeight / 2 - uiScreenLayerHeight / 2) - 60;
     uiAlpha = 0.85f;
 }
 

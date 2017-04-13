@@ -311,7 +311,7 @@
 - (void)bannerViewActionDidFinish:(ADBannerView *)banner
 {
     NSLog(@"bannerViewActionDidFinish");
-    [ui startAnimateMenu];
+    //[ui startAnimateMenu];
 }
 
 // UI-Delegate

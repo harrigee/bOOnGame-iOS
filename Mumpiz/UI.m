@@ -320,9 +320,7 @@
         [superview insertSubview:leaderBoardButton belowSubview:bannerView];
         [superview insertSubview:retryButton belowSubview:bannerView];
         [superview insertSubview:soundButton belowSubview:bannerView];
-        
-        [self stopAnimateMenu];
-        
+                
         [UIView animateWithDuration:0.33f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
             viewMenuScreen.center = menuCenterForAnimation;
         }
@@ -346,6 +344,7 @@
 {
     [self showMenuScreenWithText:[NSString stringWithFormat:@"[ welcome ]"]];
     [retryButton setTitle:[NSString stringWithFormat:@"start"] forState: UIControlStateNormal];
+    [self startAnimateMenu];
     //[self.delegate stopGame]; // maybe working
 }
 

@@ -28,6 +28,7 @@
 - (void)showMenuScreen;
 - (void)hideGameOverScreen;
 - (void)bringToFront;
+- (void)stopAnimateMenu;
 - (void)startAnimateMenu;
 - (void)addToScore:(int)add;
 - (void)addToScore:(int)add forView:(UIView*)view;
