@@ -161,7 +161,6 @@
     
     // add score
     [ui addToScore:addScore forView:view];
-    //[ui addToScore:1];
     
     // play collision sound
     if([Properties sharedProperties].globalSoundOn)

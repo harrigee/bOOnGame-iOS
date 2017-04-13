@@ -62,9 +62,9 @@
     }
     
     // GLOBAL
-    globalGameHeight = [self screenSize].height - globalBannerHeight;
+    globalGameHeight = [UIScreen mainScreen].bounds.size.height - globalBannerHeight;
     globalScreenHeight = 568;
-    globalGameWidth =  [self screenSize].width;
+    globalGameWidth =  [UIScreen mainScreen].bounds.size.width;
     globalScreenWidth = 320;
     globalHeightRatio = (float)globalGameHeight / (float)globalScreenHeight;
     globalWidthRatio = (float)globalGameWidth / (float)globalScreenWidth;
