@@ -733,7 +733,7 @@
     [leaderBoardButton setTitle:[NSString stringWithFormat:@"beat"] forState: UIControlStateNormal];
     [leaderBoardButton setNeedsLayout];
     
-    CGSize contextSize = CGSizeMake(superview.frame.size.width, [Properties sharedProperties].globalGameHeight);
+    CGSize contextSize = CGSizeMake(superview.frame.size.width, [Properties sharedProperties].globalGameHeight + [Properties sharedProperties].globalBannerHeight);
     UIGraphicsBeginImageContext(contextSize);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [superview.layer renderInContext:context];
