@@ -18,6 +18,7 @@
 - (void)pauseGame;
 - (void)reportScore:(int64_t)score;
 - (void)showLeaderboard;
+- (World*)getWorld;
 
 @property ADBannerView *adBannerView;
 

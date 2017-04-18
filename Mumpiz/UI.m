@@ -82,6 +82,8 @@
 
 - (void)createUI
 {
+    int colorSet = 7;
+    
     // bannerView
     bannerView = [UIView new];
     bannerView.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [Properties sharedProperties].globalBannerHeight);
@@ -149,7 +151,7 @@
     viewMenuScreen.frame = CGRectMake([Properties sharedProperties].globalGameWidth / 2 - [Properties sharedProperties].uiScreenLayerHeight / 2, [Properties sharedProperties].uiScreenLayerY, [Properties sharedProperties].uiScreenLayerHeight, [Properties sharedProperties].uiScreenLayerHeight);
     viewMenuScreen.center = CGPointMake(-viewMenuScreen.frame.size.width - 5, [Properties sharedProperties].uiScreenLayerY + viewMenuScreen.frame.size.height / 2);
     viewMenuScreen.layer.cornerRadius = 0;
-    viewMenuScreen.backgroundColor = [UIColor colorWithRed:105/255.0f green:29/255.0f blue:116/255.0f alpha:1];
+    viewMenuScreen.backgroundColor = [self darkerColorForColor:[[superViewController getWorld] getColors][colorSet][0]];
     viewMenuScreen.layer.masksToBounds = false;
     
     mainMenuContentScreen = [UIView new];
@@ -209,7 +211,7 @@
     [retryButton setTitle: @"start" forState: UIControlStateNormal];
     retryButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0f];
     retryButton.titleLabel.textColor = [UIColor whiteColor];
-    retryButton.backgroundColor = [UIColor colorWithRed:0/255.0f green:110/255.0f blue:240/255.0f alpha:1];
+    retryButton.backgroundColor = [self darkerColorForColor:[[superViewController getWorld] getColors][colorSet][1]];
     retryButton.layer.cornerRadius = 0;
     [retryButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [retryButton addTarget:self action:@selector(okButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -220,7 +222,7 @@
     [shareButton setTitle: @"share" forState: UIControlStateNormal];
     shareButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0f];
     shareButton.titleLabel.textColor = [UIColor whiteColor];
-    shareButton.backgroundColor = [UIColor colorWithRed:230/255.0f green:0/255.0f blue:80/255.0f alpha:1];
+    shareButton.backgroundColor = [self darkerColorForColor:[[superViewController getWorld] getColors][colorSet][2]];
     shareButton.layer.cornerRadius = 0;
     [shareButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [shareButton addTarget:self action:@selector(shareButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -231,7 +233,7 @@
     [leaderBoardButton setTitle: @"rankings" forState: UIControlStateNormal];
     leaderBoardButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0f];
     leaderBoardButton.titleLabel.textColor = [UIColor blackColor];
-    leaderBoardButton.backgroundColor = [UIColor colorWithRed:20/255.0f green:180/255.0f blue:0/255.0f alpha:1];
+    leaderBoardButton.backgroundColor = [self darkerColorForColor:[[superViewController getWorld] getColors][colorSet][3]];
     leaderBoardButton.layer.cornerRadius = 0;
     [leaderBoardButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [leaderBoardButton addTarget:self action:@selector(leaderBoardButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -286,6 +288,17 @@
     soundButton.transform = CGAffineTransformMakeRotation(rotationSound);
     leaderBoardButton.transform = CGAffineTransformMakeRotation(rotationLeaderboard);
     modeButton.transform = CGAffineTransformMakeRotation(rotationMode);
+}
+
+- (UIColor *)darkerColorForColor:(UIColor *)c
+{
+    CGFloat r, g, b, a;
+    if ([c getRed:&r green:&g blue:&b alpha:&a])
+        return [UIColor colorWithRed:MAX(r - 0.1, 0.0)
+                               green:MAX(g - 0.1, 0.0)
+                                blue:MAX(b - 0.1, 0.0)
+                               alpha:a];
+    return nil;
 }
 
 - (void)handleTapOnMantroLogo:(UITapGestureRecognizer *)recognizer

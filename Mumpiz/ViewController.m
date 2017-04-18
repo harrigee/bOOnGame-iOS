@@ -83,6 +83,10 @@
     [ui showMenuScreen];
 }
 
+- (World*)getWorld {
+    return self.world;
+}
+
 # pragma mark GameCenter
 
 - (void)showGameCenter

@@ -183,7 +183,8 @@
     NSArray *inputColors5 = [NSArray new];
     NSArray *inputColors6 = [NSArray new];
     NSArray *inputColors7 = [NSArray new];
-    
+    NSArray *inputColors8 = [NSArray new];
+    NSArray *inputColors9 = [NSArray new];
     
     NSMutableArray *setOfColors = [NSMutableArray new];
     
@@ -223,6 +224,14 @@
                      [UIColor colorWithRed:0/255.0f green:137/255.0f blue:255/255.0f alpha:1],
                      [UIColor colorWithRed:255/255.0f green:0/255.0f blue:93/255.0f alpha:1]];
     
+    inputColors8 = @[[UIColor colorWithRed:58/255.0f green:87/255.0f blue:124/255.0f alpha:1],
+                     [UIColor colorWithRed:115/255.0f green:173/255.0f blue:57/255.0f alpha:1],
+                     [UIColor colorWithRed:248/255.0f green:120/255.0f blue:29/255.0f alpha:1],
+                     [UIColor colorWithRed:29/255.0f green:157/255.0f blue:248/255.0f alpha:1]];
+    
+    inputColors9 = @[[UIColor colorWithRed:115/255.0f green:173/255.0f blue:57/255.0f alpha:1],
+                     [UIColor colorWithRed:248/255.0f green:120/255.0f blue:29/255.0f alpha:1],
+                     [UIColor colorWithRed:29/255.0f green:157/255.0f blue:248/255.0f alpha:1]];
     
     [setOfColors addObject:inputColors1];
     [setOfColors addObject:inputColors2];
@@ -231,6 +240,8 @@
     [setOfColors addObject:inputColors5];
     [setOfColors addObject:inputColors6];
     [setOfColors addObject:inputColors7];
+    [setOfColors addObject:inputColors8];
+    [setOfColors addObject:inputColors9];
     
     return setOfColors;
 }
