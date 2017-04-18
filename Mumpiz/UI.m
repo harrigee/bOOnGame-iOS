@@ -88,15 +88,18 @@
     bannerView.center = CGPointMake(bannerView.center.x, [[UIScreen mainScreen] bounds].size.height - [Properties sharedProperties].globalBannerHeight / 2);
     bannerView.backgroundColor = [UIColor colorWithRed:0.95f green:0.95f blue:0.95f alpha:1.0f];
 
-    // labelView
-    UILabel *boonLabelBanner = [UILabel new];
-    boonLabelBanner.frame = CGRectMake(0, 0, bannerView.frame.size.width, bannerView.frame.size.height);
-    boonLabelBanner.textAlignment = NSTextAlignmentCenter;
-    boonLabelBanner.backgroundColor = [UIColor clearColor];
-    boonLabelBanner.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:25.0f*[Properties sharedProperties].globalHeightRatio];
-    boonLabelBanner.textColor  = [UIColor blackColor];
-    boonLabelBanner.text = [NSString stringWithFormat:@"bOOn"];
-    [bannerView addSubview:boonLabelBanner];
+    // mantro logo
+    UIImageView *boonImageView = [UIImageView new];
+    boonImageView.frame = CGRectMake(0, 0, bannerView.frame.size.width, bannerView.frame.size.height);
+    boonImageView.backgroundColor = [UIColor clearColor];
+    boonImageView.image = [UIImage imageNamed:@"mantrologo"];
+    boonImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnMantroLogo:)];
+    [self.bannerView addGestureRecognizer:singleFingerTap];
+    
+    // banner view
+    [bannerView addSubview:boonImageView];
     [self.superview addSubview:bannerView];
     
     // side hud
@@ -283,6 +286,16 @@
     soundButton.transform = CGAffineTransformMakeRotation(rotationSound);
     leaderBoardButton.transform = CGAffineTransformMakeRotation(rotationLeaderboard);
     modeButton.transform = CGAffineTransformMakeRotation(rotationMode);
+}
+
+- (void)handleTapOnMantroLogo:(UITapGestureRecognizer *)recognizer
+{
+    [superViewController pauseGame];
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.mantro.net"];
+    if (![[UIApplication sharedApplication] openURL:url]) {
+        NSLog(@"%@%@",@"Failed to open url:",[url description]);
+    }
 }
 
 - (void)showMenuScreenWithText:(NSString*)text

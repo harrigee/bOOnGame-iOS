@@ -54,6 +54,7 @@
 		6695E773194857C100852303 /* AchievementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6695E772194857C100852303 /* AchievementsViewController.m */; };
 		66F68A7B19047226006EB0E6 /* Gravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F68A7A19047226006EB0E6 /* Gravity.m */; };
 		F85521491E9F7DA6004E7C0D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85521481E9F7DA6004E7C0D /* Launch Screen.storyboard */; };
+		F8E1ED021EA63EEC00592DC6 /* mantrologo.png in Resources */ = {isa = PBXBuildFile; fileRef = F8E1ED011EA63EEC00592DC6 /* mantrologo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		66F68A7919047226006EB0E6 /* Gravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gravity.h; sourceTree = "<group>"; };
 		66F68A7A19047226006EB0E6 /* Gravity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gravity.m; sourceTree = "<group>"; };
 		F85521481E9F7DA6004E7C0D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F8E1ED011EA63EEC00592DC6 /* mantrologo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mantrologo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 		66B22E72193DB6DD00C1EE67 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F8E1ED011EA63EEC00592DC6 /* mantrologo.png */,
 				665733DB1960604600F243EC /* Default-568h@2x.png */,
 				665733DC1960604600F243EC /* Default-Portrait~ipad.png */,
 				665733DD1960604600F243EC /* Default.png */,
@@ -421,6 +424,7 @@
 				665733F51960604600F243EC /* icon_72.png in Resources */,
 				665733EF1960604600F243EC /* Default~ipad.png in Resources */,
 				666395BA194882D8000E2CC2 /* sound3.wav in Resources */,
+				F8E1ED021EA63EEC00592DC6 /* mantrologo.png in Resources */,
 				666395BC194882D8000E2CC2 /* soundDead.wav in Resources */,
 				666395BB194882D8000E2CC2 /* sound4.wav in Resources */,
 				665733ED1960604600F243EC /* Default-Portrait~ipad.png in Resources */,
