@@ -289,9 +289,7 @@
 }
 
 - (void)handleTapOnMantroLogo:(UITapGestureRecognizer *)recognizer
-{
-    [superViewController pauseGame];
-    
+{    
     NSURL *url = [NSURL URLWithString:@"http://www.mantro.net"];
     if (![[UIApplication sharedApplication] openURL:url]) {
         NSLog(@"%@%@",@"Failed to open url:",[url description]);
