@@ -162,11 +162,11 @@
     
     // WORLD
     if(globalGameMode) {
-        worldStandardColorSet = 5;
+        worldStandardColorSet = 7;
         worldAreaXOffset = 30;
     }
     else {
-        worldStandardColorSet = 6;
+        worldStandardColorSet = 8;
         worldAreaXOffset = 60;
     }
     
