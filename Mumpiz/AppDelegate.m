@@ -85,7 +85,7 @@
 
 - (void)goToRating
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=893392880&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1232774106&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

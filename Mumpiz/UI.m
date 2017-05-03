@@ -747,7 +747,7 @@
     else
         string = [NSString stringWithFormat:@"look, I`ve made incredible %i points @bOOnGame!", bestScore];
     
-    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/boon-game/id893392880?l=de&ls=1&mt=8"];
+    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/us/app/mantro-boon/id1232774106?l=de&ls=1&mt=8"];
     
     NSArray *dataToShare = @[string, url, image];
     
