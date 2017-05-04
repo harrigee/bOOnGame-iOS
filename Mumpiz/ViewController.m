@@ -132,25 +132,26 @@
         }
         
         // Load Scores
-        GKLeaderboard *leaderboardRequest = [[GKLeaderboard alloc] init];
-        leaderboardRequest.identifier = boardHard.category;
-        [leaderboardRequest loadScoresWithCompletionHandler:^(NSArray *scores, NSError *error) {
+        GKLeaderboard *leaderboardRequest1 = [[GKLeaderboard alloc] init];
+        leaderboardRequest1.identifier = boardHard.category;
+        [leaderboardRequest1 loadScoresWithCompletionHandler:^(NSArray *scores, NSError *error) {
             if (error) {
                 NSLog(@"Error getting Score: %@", error);
             } else if (scores) {
-                GKScore *localPlayerScore = leaderboardRequest.localPlayerScore;
+                GKScore *localPlayerScore = leaderboardRequest1.localPlayerScore;
                 NSLog(@"Local player's score hard: %lld", localPlayerScore.value);
                 [self saveBestScoreHard:(int)localPlayerScore.value];
                 [ui updateGameOverScreenValues];
             }
         }];
         
-        leaderboardRequest.identifier = boardEasy.category;
-        [leaderboardRequest loadScoresWithCompletionHandler:^(NSArray *scores, NSError *error) {
+        GKLeaderboard *leaderboardRequest2 = [[GKLeaderboard alloc] init];
+        leaderboardRequest2.identifier = boardEasy.category;
+        [leaderboardRequest2 loadScoresWithCompletionHandler:^(NSArray *scores, NSError *error) {
             if (error) {
                 NSLog(@"Error getting Score: %@", error);
             } else if (scores) {
-                GKScore *localPlayerScore = leaderboardRequest.localPlayerScore;
+                GKScore *localPlayerScore = leaderboardRequest2.localPlayerScore;
                 NSLog(@"Local player's score easy: %lld", localPlayerScore.value);
                 [self saveBestScoreEasy:(int)localPlayerScore.value];
                 [ui updateGameOverScreenValues];
