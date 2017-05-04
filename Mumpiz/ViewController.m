@@ -123,8 +123,13 @@
 - (void)loadLeaderboardInfo
 {
     [GKLeaderboard loadLeaderboardsWithCompletionHandler:^(NSArray *leaderboardsParam, NSError *error) {
-        boardHard = (GKLeaderboard*)[leaderboardsParam objectAtIndex:0];
-        boardEasy = (GKLeaderboard*)[leaderboardsParam objectAtIndex:1];
+        
+        if ([((GKLeaderboard*)[leaderboardsParam objectAtIndex:0]).identifier isEqualToString:@"bOOnLeaderboard1"]) {
+            boardHard = (GKLeaderboard*)[leaderboardsParam objectAtIndex:0];
+        }
+        if ([((GKLeaderboard*)[leaderboardsParam objectAtIndex:1]).identifier isEqualToString:@"bOOnLeaderboard2"]) {
+            boardEasy = (GKLeaderboard*)[leaderboardsParam objectAtIndex:1];
+        }
         
         // Load Scores
         GKLeaderboard *leaderboardRequest = [[GKLeaderboard alloc] init];
