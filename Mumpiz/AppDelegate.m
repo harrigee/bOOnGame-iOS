@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!"
+    /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!"
                                                     message:@"bOOn has no commercial background, so we are asking you to please tell your friends about bOOn and rate us on the AppStore :)"
                                                    delegate:self
                                           cancelButtonTitle:nil
@@ -22,7 +22,7 @@
     
     if(![[[NSUserDefaults standardUserDefaults] stringForKey:@"firstTime"] isEqualToString:@"1"]) {
         [alert show];
-    }
+    }*/
     
     return YES;
 }
